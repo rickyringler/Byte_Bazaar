@@ -67,7 +67,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\Views\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\ButtomTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\TextBoxTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -75,6 +83,11 @@
   <ItemGroup>
     <Compile Include="Main\ObservableObject.cs" />
     <Compile Include="Main\RelayCommand.cs" />
+    <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\HomeViewModel.cs" />
+    <Compile Include="MVVM\Views\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -102,10 +115,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomFonts\" />
-    <Folder Include="Images\" />
     <Folder Include="MVVM\Models\" />
-    <Folder Include="MVVM\ViewModel\" />
-    <Folder Include="MVVM\Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\E-Commerce-PNG-Background-Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\1248429.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
